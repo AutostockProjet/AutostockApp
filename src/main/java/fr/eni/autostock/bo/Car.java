@@ -131,6 +131,23 @@ public class Car {
 	}
 
 
-	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Car [id=");
+		builder.append(id);
+		builder.append(", marque=");
+		builder.append(brand);
+		builder.append(", modele=");
+		builder.append(modele);
+		builder.append(", energie=");
+		builder.append(energie);
+		builder.append(", options=");
+		builder.append(options);
+		builder.append(", prix=");
+		builder.append(price);
+		builder.append("]");
+		return builder.toString();
+	}
 	
 }
