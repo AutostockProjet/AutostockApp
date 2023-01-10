@@ -4,27 +4,35 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
-public class Brand {
+@Table(name = "genders")
+public class Gender {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private String name;
 	
-	public Brand() {
-	}
+	@NotBlank
+	@NotNull
+	private String label;
 	
-	public Brand(String name) {
+	public Gender() {
 		super();
-		this.name = name;
 	}
 	
-	public Brand(long id, String name) {
+	public Gender(String label) {
+		super();
+		this.label = label;
+	}
+	
+	public Gender(long id, String label) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.label = label;
 	}
 
 	public long getId() {
@@ -35,23 +43,23 @@ public class Brand {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getLabel() {
+		return label;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setLabel(String label) {
+		this.label = label;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Brand [id=");
+		builder.append("Gender [id=");
 		builder.append(id);
-		builder.append(", name=");
-		builder.append(name);
+		builder.append(", label=");
+		builder.append(label);
 		builder.append("]");
 		return builder.toString();
 	}
-
+	
 }

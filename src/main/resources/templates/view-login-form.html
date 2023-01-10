@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Connexion</title>
+</head>
+<body>
+
+<main>
+		<form action="/login" method="post">
+			<h1>Se connecter</h1>
+			<ul class="flex-outer">
+				<li><label for="inputLogin">Email : </label> <input required
+					type="text" id="inputLogin" name="email"></li>
+				<li><label for="inputPwd">Mot de Passe : </label> <input
+					required type="password" id="inputPwd" name="password"></li>
+				<li>
+					<button type="submit">Connecter</button>
+				</li>
+			</ul>
+		</form>
+	</main>
+
+</body>
+</html>
