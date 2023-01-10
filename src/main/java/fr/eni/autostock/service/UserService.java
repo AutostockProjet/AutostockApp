@@ -6,7 +6,7 @@ import java.util.List;
 import fr.eni.autostock.bo.City;
 import fr.eni.autostock.bo.Gender;
 import fr.eni.autostock.bo.User;
-
+ 
 public interface UserService {
 	
 	void saveUser(User user);

@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
 	private UserRepository userRepository;
 	private GenderRepository genderRepository;
 	private CityRepository cityRepository;
-
+ 
 	@Autowired
 	public UserServiceImpl(UserRepository userRepository,GenderRepository genderRepository, CityRepository cityRepository) {
 		super();
